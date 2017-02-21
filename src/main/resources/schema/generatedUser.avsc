@@ -1,0 +1,9 @@
+{"namespace": "com.isaac.cassandra.kafka",
+ "type": "record",
+ "name": "UserGen",
+ "fields": [
+     {"name": "name", "type": "string"},
+     {"name": "surname",  "type": "string"},
+     {"name": "id", "type": "string"}
+ ]
+}
