@@ -1,8 +1,8 @@
 ##Create Topic with 2 partitions
-./bin/kafka-topics.sh --create --zookeeper localhost:2181  --replication-factor 1 --partitions 2 --topic isaac
+./bin/kafka-topics.sh --create --zookeeper localhost:2181/kafka  --replication-factor 1 --partitions 2 --topic isaac
 
 ## How many messages in the Topic
-./bin/kafka-consumer-offset-checker.sh --group group1 --topic SpringKafkaTopic --zookeeper mcgyver:2181
+./bin/kafka-consumer-offset-checker.sh --group group1 --topic fileUpload --zookeeper mcgyver:2181
 
 ##Start Zookeeper
 bin/zookeeper-server-start.sh config/zookeeper.properties
@@ -12,3 +12,6 @@ bin/kafka-server-start.sh config/server.properties
 
 ##Start Confluent
 ./bin/schema-registry-start etc/schema-registry/schema-registry.properties
+
+##List All Topics
+bin/kafka-topics.sh --zookeeper mcgyver:2181 --list
